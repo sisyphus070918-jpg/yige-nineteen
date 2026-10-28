@@ -1,0 +1,48 @@
+/* A sealed invitation, then a quietly responsive little universe. */
+.stage{opacity:0;filter:blur(9px);pointer-events:none;transition:opacity 1.5s ease,filter 1.5s ease}
+body.entered .stage{opacity:1;filter:blur(0);pointer-events:auto}
+.opening{position:fixed;inset:0;z-index:40;background:#101e31;overflow:hidden;transition:opacity 1.2s ease,filter 1.2s ease;isolation:isolate}
+.opening[hidden]{display:none}
+.opening-scene{position:absolute;width:1440px;height:900px;left:50%;top:50%;transform:translate(-50%,-50%) scale(var(--scale,1));background:radial-gradient(ellipse at 49% 42%,#23394a 0,#15273b 43%,#101e31 78%)}
+.opening-scene:after{content:'';position:absolute;inset:0;pointer-events:none;opacity:.14;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.7' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Cpath d='M0 0h160v160H0z' fill='%23fff' opacity='.25' filter='url(%23n)'/%3E%3C/svg%3E")}
+.opening-date,.opening-inscription{position:absolute;top:51px;font-size:11px;letter-spacing:3px;color:#a7b5c0}.opening-date{left:72px;font-family:Georgia,serif}.opening-inscription{right:72px;font-family:SimSun,serif}
+.entry-orbit{position:absolute;left:414px;top:160px;width:610px;height:430px;border:1px solid #b9b39922;border-radius:50%;transform:rotate(-30deg)}
+.entry-orbit:after{content:'✧';font-family:Georgia,serif;position:absolute;top:34px;right:39px;color:#d8c8a5;font-size:33px;transform:rotate(30deg)}
+.entry-glow{position:absolute;left:510px;top:150px;width:420px;height:420px;border-radius:50%;background:radial-gradient(circle,#d1c09a15 0,#d1c09a03 60%,transparent 70%);filter:blur(45px)}
+.invitation{position:absolute;left:570px;top:176px;width:300px;height:402px;padding:11px;background:linear-gradient(130deg,#71858e,#c6d1cd 1%,#536d79 2%,#1c3546 8%,#294857 55%,#182d3e 99%,#82969b);box-shadow:25px 40px 65px #06111e70,-1px -1px 0 #b7c2be55;transform:perspective(1400px) rotateY(-10deg) rotateZ(-7deg);transition:transform 1.2s ease,opacity 1s ease}
+.invitation-inner{border:1px solid #b3bba55c;width:100%;height:100%;position:relative;display:flex;align-items:center;flex-direction:column}
+.invitation-for{font-family:Georgia,serif;font-style:italic;font-size:12px;color:#c2cccb;letter-spacing:1px;margin-top:33px}
+.invitation-nineteen{font-family:Georgia,serif;font-size:176px;letter-spacing:-14px;padding-right:14px;line-height:1.22;background:linear-gradient(115deg,#c0a478 0,#f5e8c7 30%,#bda379 50%,#f0e2bd 65%,#b59d7c 90%);background-clip:text;-webkit-background-clip:text;color:transparent;text-shadow:0 1px 22px #dbc6a510}
+.invitation-name{font-family:SimSun,serif;color:#e5dfca;font-size:20px;letter-spacing:9px;padding-left:9px;margin-top:3px}
+.invitation-rule{height:1px;width:33px;background:#c4b49380;margin:20px 0 15px}
+.invitation-bottom{font-family:SimSun,serif;font-size:10px;color:#b9c6c8;letter-spacing:2px}
+.invitation-seal{position:absolute;bottom:-28px;left:calc(50% - 25px);width:50px;height:50px;border-radius:50%;display:grid;place-items:center;font-size:28px;color:#e0c9a0;background:radial-gradient(circle at 33% 24%,#69808b,#273e4a);border:1px solid #a59d8066;box-shadow:3px 5px 10px #0005}
+.entry-copy{position:absolute;left:0;right:0;top:634px;text-align:center}.entry-copy h1{font-family:SimSun,serif;font-size:34px;font-weight:400;letter-spacing:7px;margin:0 0 36px;padding-left:7px;color:#e9e6db}
+#enter-gift{display:inline-flex;align-items:center;gap:29px;font-size:12px;letter-spacing:3px;border:1px solid #b7ad915c;border-radius:3px;padding:17px 23px 17px 29px;background:linear-gradient(100deg,#d0b98e13,#d0b98e04);color:#ddd3bd;transition:background .4s,border-color .4s;position:relative;z-index:2}
+#enter-gift:hover{background:#d0b98e18;border-color:#cbb8909c}#enter-gift i{font-family:Georgia,serif;font-style:normal;font-size:19px;line-height:1;color:#e2c79e}
+.entry-signature{position:absolute;bottom:43px;left:0;right:0;text-align:center;font-family:Georgia,serif;font-style:italic;font-size:11px;letter-spacing:1px;color:#8a9ba6}
+body.entered .opening{opacity:0;pointer-events:none;filter:blur(12px)}body.entered .invitation{transform:perspective(1400px) rotateY(8deg) rotateZ(0) translateY(-48px);opacity:0}
+.universe{transform:perspective(1400px) rotateX(var(--tilt-y,0deg)) rotateY(var(--tilt-x,0deg));transition:transform .75s cubic-bezier(.2,.65,.3,1);transform-style:preserve-3d}
+.collectibles{translate:var(--object-x,0px) var(--object-y,0px);transition:translate .8s ease}
+#stardust{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:8}
+.wish-stars{position:absolute;inset:0;pointer-events:none;z-index:5}.wish-star{pointer-events:auto;position:absolute;display:grid;place-items:center;width:28px;height:28px;margin:-14px;color:#f7e8bd;font-size:17px;font-family:Georgia,serif;text-shadow:0 0 15px #e9daaf;transition:transform .3s}.wish-star:hover{transform:scale(1.4)}
+.kun-playing .vinyl{animation:record-spin 8s linear infinite}.kun-playing .vinyl-object:hover{transform:rotate(-6deg)}
+dialog#kun[open] .large-record{animation:record-spin 10s linear infinite}dialog#kun[open] .large-record>span{animation:record-spin 10s linear infinite reverse}
+.juhoon-playing .cassette-window i{animation:record-spin 2s linear infinite}.juhoon-playing .cassette-label{color:#e3f0ef}
+.cake-object{position:absolute;left:554px;bottom:163px;width:85px;height:98px;z-index:6;transition:transform .4s}.cake-object:hover{transform:translateY(-5px)}
+.mini-flame{position:absolute;left:41px;top:2px;width:9px;height:15px;border-radius:80% 20% 60% 40%;background:linear-gradient(#fff7ce,#e5ac67);transform:rotate(-25deg);box-shadow:0 0 22px #edc8887a}
+.mini-candle{position:absolute;left:42px;top:24px;width:5px;height:26px;background:linear-gradient(90deg,#8aa5af,#e3e6da,#6f8792)}
+.mini-cake{position:absolute;left:18px;top:50px;width:54px;height:32px;border-radius:50% 50% 20% 20% / 16% 16% 15% 15%;background:linear-gradient(100deg,#6a858f,#d4d9cb 38%,#7f99a0 72%,#445f70);box-shadow:0 8px 15px #0713225c}.mini-cake:after{content:'';position:absolute;left:-9px;right:-9px;height:7px;border-radius:50%;bottom:-3px;background:#8e9fa4;z-index:-1}
+.candle-dialog{width:630px;text-align:center;padding:47px 55px 34px;background:radial-gradient(ellipse at 50% 48%,#30475a,#182c43 69%)}
+.candle-dialog h2{font-size:32px;margin:15px 0 8px}.candle-dialog .dialog-kicker{font-size:10px}
+.candle-sculpture{position:relative;width:300px;height:325px;margin:0 auto;display:block}.candle-flame{position:absolute;left:139px;top:33px;width:25px;height:47px;background:radial-gradient(ellipse at 50% 80%,#fffcde,#ebbc7d 58%,#bf7f4c);border-radius:70% 30% 65% 35%;transform:rotate(-18deg);box-shadow:0 0 33px #f7d6a84f,0 0 90px #f7d6a82a;transition:opacity .5s,scale .5s;transform-origin:bottom}
+.candle-flame:after{content:'';position:absolute;width:10px;height:20px;border-radius:50%;background:#fff8dd;bottom:4px;left:8px;filter:blur(2px)}
+.candle-wick{position:absolute;left:150px;top:80px;height:14px;width:2px;background:#76694f}.candle-stick{position:absolute;left:143px;top:92px;width:17px;height:87px;border-radius:4px 4px 0 0;background:linear-gradient(90deg,#77939d,#e2e8dd 47%,#8ba0a4 75%,#4d697c)}
+.cake-tier{position:absolute;top:177px;left:47px;width:211px;height:110px;border-radius:50% 50% 15% 15% / 20% 20% 14% 14%;background:linear-gradient(110deg,#7c949b,#dde0d1 32%,#a7bab7 62%,#547182);box-shadow:4px 10px 29px #081b3380,inset 0 3px 2px #e3e6d682;display:grid;place-items:center;padding-top:12px}.cake-tier:before{content:'';position:absolute;left:0;right:0;top:1px;height:40px;border-radius:50%;background:linear-gradient(170deg,#e2e2d0,#9eafa9);box-shadow:0 4px 6px #2c4b5c22}.cake-tier b{font-family:Georgia,serif;font-size:47px;font-weight:400;letter-spacing:3px;position:relative;color:#e3ddc6;text-shadow:-1px -1px 0 #597d8655}
+.cake-plate{position:absolute;left:23px;top:271px;width:259px;height:28px;z-index:-1;border-radius:50%;background:linear-gradient(#afbdba,#627f8d);box-shadow:0 16px 24px #05112655}
+.extinguished .candle-flame{opacity:0;scale:.1}.candle-smoke{position:absolute;left:149px;top:50px;width:2px;height:0;background:#d5dad077;filter:blur(2px);opacity:0}
+.extinguished .candle-smoke{animation:candle-smoke 1.6s ease-out both}#candle-message{font-size:12px;letter-spacing:2px;min-height:30px;margin:8px 0;color:#bac9ce}
+.candle-stars{height:0;position:relative;color:#cdbb95;font-family:Georgia,serif;letter-spacing:23px;opacity:.35;top:132px;pointer-events:none}.candle-stars span{font-size:25px;margin:0 55px}.wish-made .candle-stars{opacity:1;transition:opacity 1s}
+dialog{scrollbar-width:thin;scrollbar-color:#75838c66 transparent}.letter-dialog{scrollbar-color:#9d9e9566 #eae4d7}
+@keyframes record-spin{to{rotate:360deg}}@keyframes candle-smoke{0%{height:0;opacity:0;transform:translateY(0)}20%{height:45px;opacity:.55}100%{height:70px;opacity:0;transform:translate(12px,-37px) rotate(13deg)}}
+@media(prefers-reduced-motion:reduce){.stage,.opening,.invitation,.universe,.collectibles{transition:none!important}.kun-playing .vinyl,dialog#kun[open] .large-record,dialog#kun[open] .large-record>span,.juhoon-playing .cassette-window i{animation:none!important}}

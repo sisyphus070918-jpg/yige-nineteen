@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#14243b"><meta name="description" content="给吕宜格的十九岁，一小片只属于你的宇宙。">
+<title>宜格，十九岁快乐。</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='32' fill='%2314243b'/%3E%3Ctext x='32' y='43' text-anchor='middle' font-family='Georgia' font-size='37' fill='%23f2eee5'%3E19%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="style.css"><link rel="stylesheet" href="experience.css"><link rel="stylesheet" href="gallery.css">
+</head>
+<body>
+<section id="opening" class="opening" aria-labelledby="opening-title">
+ <div class="opening-scene">
+  <span class="opening-date">11.02 / 2026</span><span class="opening-inscription">为宜格，保留这一刻。</span>
+  <div class="entry-orbit" aria-hidden="true"></div><div class="entry-glow" aria-hidden="true"></div>
+  <div class="invitation" aria-hidden="true"><div class="invitation-inner"><span class="invitation-for">a day, entirely yours.</span><span class="invitation-nineteen">19</span><span class="invitation-name">吕 宜 格</span><span class="invitation-rule"></span><span class="invitation-bottom">十一月二日，准时被爱。</span><span class="invitation-seal">✳</span></div></div>
+  <div class="entry-copy"><h1 id="opening-title">这一刻，只属于你。</h1><button id="enter-gift"><span>开启，宜格的十九岁</span><i>✧</i></button></div>
+  <span class="entry-signature">a little universe, waiting for you.</span>
+ </div>
+</section>
+<main class="stage" id="stage" inert aria-hidden="true">
+ <canvas id="sky" aria-hidden="true"></canvas><canvas id="stardust" aria-hidden="true"></canvas><div class="horizon" aria-hidden="true"></div>
+ <header><a class="brand" href="#" aria-label="回到礼物封面"><span class="brand-star">✳</span><span>宜格的十九岁</span></a>
+ <nav aria-label="生日展厅"><button data-open="letter">一封信</button><button data-open="cinema">放映室 <span class="play-small">▷</span></button><button id="sound" class="round" aria-label="开启背景音乐" aria-pressed="false"><svg viewBox="0 0 24 24"><path d="M4 10v4h4l5 4V6L8 10H4Zm13-2a6 6 0 0 1 0 8M20 5a10 10 0 0 1 0 14"/></svg></button><button id="fullscreen" class="round" aria-label="全屏"><svg viewBox="0 0 24 24"><path d="M8 4H4v4m12-4h4v4M4 16v4h4m12-4v4h-4"/></svg></button></nav></header>
+ <section class="intro"><p class="dedication">给，吕宜格</p><h1>十九岁。<br>尽兴而为。</h1><p class="intro-note">世界很大，<br>而今天，所有星光都偏向你。</p><button class="film-link" data-open="cinema"><span class="play-ring">▶</span><span>为你，留住这一刻</span></button></section>
+ <section class="universe" aria-label="宜格的十九岁星球">
+  <div class="orbital orbital-back" aria-hidden="true"></div><div class="planet-halo" aria-hidden="true"></div>
+  <button class="planet" id="planet" aria-label="打开十九岁生日愿望"><span class="planet-text">19</span><span class="planet-caption">a little universe, all yours.</span></button>
+  <div class="orbital orbital-front" aria-hidden="true"></div><div id="wish-stars" class="wish-stars"></div>
+  <button class="little-star north" data-open="wish" aria-label="许一个愿望">✧</button>
+  <button class="little-star satellite" id="lucky" aria-label="收下一句生日祝福">✦</button>
+  <span class="orbit-caption" aria-hidden="true">every little thing you love belongs here.</span>
+ </section>
+ <button class="cake-object" data-open="candle" aria-label="打开生日烛光"><span class="mini-flame"></span><span class="mini-candle"></span><span class="mini-cake"></span></button>
+ <div class="collectibles">
+  <button class="vinyl-object" data-open="kun" aria-label="打开蔡徐坤 KUN 黑胶彩蛋"><span class="vinyl"><span class="vinyl-label"><b>KUN</b><small>蔡徐坤</small><i></i></span></span><span class="vinyl-sleeve">for your<br>good days.</span></button>
+  <button class="cassette-object" data-open="juhoon" aria-label="打开 JUHOON 磁带彩蛋"><span class="cassette-label"><b>JUHOON</b><small>COLOR OUTSIDE THE LINES</small></span><span class="cassette-window"><i></i><em></em><i></i></span><span class="cassette-bottom">SIDE 19 <span>CORTIS</span></span></button>
+ </div>
+ <button class="photo-slip photo-slip-kun" data-open="kun" data-photo-index="2" aria-label="发现一张蔡徐坤照片"><img src="assets/stars/kun-white-1.jpg" alt="蔡徐坤的写真小卡"></button><button class="photo-slip photo-slip-juhoon" data-open="juhoon" data-photo-index="1" aria-label="发现一张JUHOON照片"><img src="assets/stars/juhoon-portrait-4.jpg" alt="JUHOON的日常小卡"></button>
+ <footer><button class="date" id="surprise-photo" aria-label="抽一张惊喜照片"><span>11</span><i>／</i><span>02</span><small>2026</small></button><p>愿你热烈，也自在。</p><button id="keepsake" aria-label="收藏十九岁纪念卡">留一份纪念 <span>↗</span></button></footer>
+ <span class="tiny-name" aria-hidden="true">LÜ YIGE / NINETEEN</span>
+</main>
+<dialog id="letter" class="letter-dialog"><button class="close" aria-label="关闭">×</button><div class="letter-paper"><span class="letter-date">2026.11.02</span><h2>宜格，<br>十九岁快乐。</h2><div class="letter-body"><p>十九岁，听起来就很适合出发。</p><p>去喜欢值得喜欢的人，去见一直想见的风景。<br>把“下次吧”慢慢变成“就现在”。</p><p>愿你的快乐不需要多大的理由：<br>一首刚好听到的歌，一顿好吃的饭，<br>一次突然想起，身边还有人惦记着你。</p><p>也愿你偶尔迷路，依然相信自己。<br>你不用把每一天都过得漂亮，<br>你本来就值得被好好对待。</p><p>今天不催你长大。<br>今天只想说：做吕宜格，就很好。</p></div><div class="letter-sign">愿你的十九岁，尽兴、自由，且被爱着。<span>一直为你留着生日祝福的朋友</span></div><span class="paper-star">✳</span></div></dialog>
+<dialog id="wish" class="wish-dialog"><button class="close" aria-label="关闭">×</button><div class="wish-orb">✧</div><p class="dialog-kicker">宜格的第十九次公转</p><h2>把心愿交给星星。</h2><form id="wish-form"><label class="sr-only" for="wish-input">十九岁的愿望</label><textarea id="wish-input" maxlength="120" placeholder="我希望……" rows="3" required></textarea><button class="solid" type="submit">寄往宇宙</button></form><p id="wish-status" aria-live="polite"></p><div id="wish-list"></div></dialog>
+<dialog id="cinema" class="cinema-dialog"><button class="close" aria-label="关闭">×</button><div class="cinema-info"><span class="dialog-kicker">给吕宜格的生日短片</span><h2>十九岁，<br>你就是主角。</h2><p>一小片宇宙，<br>一场只为你亮起的星光。</p><a class="text-link" href="assets/yige-19.mp4" download="吕宜格的十九岁.mp4">收藏这段生日 ↗</a><div class="cinema-date">11.02 <span>十九岁限定</span></div></div><video id="birthday-video" src="assets/yige-19.mp4" poster="assets/film-poster.jpg" controls playsinline preload="metadata" aria-label="吕宜格十九岁生日短片"></video><div id="video-error" hidden>视频暂时无法读取，请从完整礼物文件夹重新打开。</div></dialog>
+<dialog id="kun" class="easter-dialog photo-gallery"><button class="close" aria-label="关闭">×</button><div class="portrait-pane"><button class="portrait-button" aria-label="下一张蔡徐坤照片"><span class="portrait-stack"><img class="portrait-image photo-face" alt="蔡徐坤的收藏照片" decoding="async"><img class="portrait-incoming photo-face" alt="" aria-hidden="true"><span class="sheen-mask" aria-hidden="true"><span class="photo-sheen"></span></span></span></button><div class="photo-controls"><button class="photo-prev" aria-label="上一张蔡徐坤照片">‹</button><span class="photo-count" aria-live="polite"></span><button class="photo-next" aria-label="下一张蔡徐坤照片">›</button></div></div><div class="gallery-copy"><p class="gallery-for">为宜格，认真收藏。</p><h2>KUN</h2><p class="artist-name">蔡徐坤</p><p class="gallery-message">喜欢的歌，循环播放。<br>喜欢的人，慢慢靠近。</p><p class="photo-caption"></p><div class="photo-thumbnails" aria-label="蔡徐坤照片收藏"></div><div class="photo-actions"><a class="text-link save-photo" download>收藏这张 ↗</a><button class="photo-shuffle">再遇见一张 ✧</button></div><a class="photo-source" target="_blank" rel="noopener noreferrer"></a></div></dialog>
+<dialog id="juhoon" class="easter-dialog photo-gallery"><button class="close" aria-label="关闭">×</button><div class="portrait-pane"><button class="portrait-button" aria-label="下一张金主训 / CORTIS照片"><span class="portrait-stack"><img class="portrait-image photo-face" alt="金主训 / CORTIS的收藏照片" decoding="async"><img class="portrait-incoming photo-face" alt="" aria-hidden="true"><span class="sheen-mask" aria-hidden="true"><span class="photo-sheen"></span></span></span></button><div class="photo-controls"><button class="photo-prev" aria-label="上一张金主训 / CORTIS照片">‹</button><span class="photo-count" aria-live="polite"></span><button class="photo-next" aria-label="下一张金主训 / CORTIS照片">›</button></div></div><div class="gallery-copy"><p class="gallery-for">为宜格，认真收藏。</p><h2>JUHOON</h2><p class="artist-name">金主训 / CORTIS</p><p class="gallery-message">留一点任性，留一点好奇。<br>十九岁，自由地喜欢。</p><p class="photo-caption"></p><div class="photo-thumbnails" aria-label="金主训 / CORTIS照片收藏"></div><div class="photo-actions"><a class="text-link save-photo" download>收藏这张 ↗</a><button class="photo-shuffle">再遇见一张 ✧</button></div><a class="photo-source" target="_blank" rel="noopener noreferrer"></a></div></dialog>
+<dialog id="candle" class="candle-dialog"><button class="close" aria-label="关闭">×</button><p class="dialog-kicker">十一月二日，只属于宜格。</p><h2>十九岁，愿望正好。</h2><div class="candle-stars" aria-hidden="true">✧ <span>✦</span> ✧</div><button id="candle-sculpture" class="candle-sculpture" aria-label="吹灭生日蜡烛"><span class="candle-smoke"></span><span class="candle-flame"></span><span class="candle-wick"></span><span class="candle-stick"></span><span class="cake-tier"><b>19</b></span><span class="cake-plate"></span></button><p id="candle-message" aria-live="polite">把喜欢的明天，悄悄放进心里。</p></dialog>
+<dialog id="card" class="card-dialog"><button class="close" aria-label="关闭">×</button><canvas id="card-canvas" width="1600" height="1000" aria-label="吕宜格十九岁纪念卡"></canvas><button id="save-card" class="solid">收藏纪念卡</button></dialog>
+<div class="toast" id="toast" role="status"></div>
+<audio id="ambience" src="assets/birthday-score.mp3" loop preload="none"></audio>
+<script src="core.js"></script><script src="app.js"></script><script src="experience.js"></script><script src="photo-data.js"></script><script src="gallery.js"></script>
+</body></html>

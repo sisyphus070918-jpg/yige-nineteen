@@ -1,0 +1,39 @@
+.photo-gallery{width:1020px;height:690px;max-height:92vh;max-width:94vw;padding:0;text-align:left;background:#14263b;overflow:hidden}
+.photo-gallery[open]{display:grid;grid-template-columns:55% 45%}
+.portrait-pane{position:relative;min-width:0;display:flex;align-items:center;justify-content:center;padding:32px 30px 63px;background:radial-gradient(ellipse at center,#263c50,#0f1c2d)}
+.portrait-button{display:block;width:100%;height:100%;padding:0;min-height:0}
+.portrait-image{width:100%;height:100%;object-fit:contain;display:block;filter:none;animation:photo-in .4s ease both}
+.photo-controls{position:absolute;bottom:19px;left:38px;right:38px;display:flex;align-items:center;justify-content:center;gap:24px}
+.photo-controls button{color:#b9c4cd;width:36px;height:29px;font-size:27px;line-height:1;font-family:Georgia,serif;font-weight:400}
+.photo-controls button:hover{color:#f2eee5}.photo-count{font-family:Georgia,serif;color:#aebec9;font-size:11px;letter-spacing:3px;min-width:70px;text-align:center}
+.gallery-copy{padding:61px 41px 29px;display:flex;flex-direction:column;min-height:0;overflow:auto}
+.gallery-copy .gallery-for{font-family:SimSun,serif;color:#c7b996;font-size:11px;letter-spacing:3px;margin:0 0 19px}
+.gallery-copy h2{font-family:Georgia,serif;font-size:54px;line-height:1.1;letter-spacing:4px;margin:0 0 12px}
+.gallery-copy .artist-name{font-size:12px;color:#8fa7b7;letter-spacing:4px;margin:0 0 26px}
+.gallery-copy .gallery-message{font-family:SimSun,serif;font-size:21px;line-height:1.9;letter-spacing:2px;color:#d6d9ce;margin:0 0 25px}
+.photo-caption{font-size:10px;color:#9eafbb;letter-spacing:1px;min-height:20px;margin:0 0 16px}
+.photo-thumbnails{display:flex;gap:7px;overflow-x:auto;flex-shrink:0;padding:5px 0 12px;scrollbar-width:thin;scrollbar-color:#a4a38b55 transparent}
+.photo-thumbnail{width:47px;height:62px;padding:0;flex-shrink:0;border:1px solid transparent;opacity:.4;transition:opacity .25s,border-color .25s}
+.photo-thumbnail img{width:100%;height:100%;object-fit:cover;object-position:center 25%;display:block}
+.photo-thumbnail[aria-pressed=true]{opacity:1;border-color:#dbc6a5;outline:1px solid #dbc6a544;outline-offset:3px}.photo-thumbnail:hover{opacity:1}
+.photo-actions{display:flex;gap:28px;margin-top:13px;align-items:center}.photo-actions .text-link{font-size:11px;letter-spacing:2px;margin:0}.photo-shuffle{font-size:11px;letter-spacing:2px;color:#a4b5c0;padding:8px 0}
+.gallery-copy .photo-source{font-size:9px;color:#768d9f;margin-top:auto;padding-top:22px;line-height:1.7;letter-spacing:.5px}.gallery-copy .photo-source:hover{color:#c2cbd0}
+.gallery-copy .egg-wish{display:none}
+.photo-slip{position:absolute;padding:5px 5px 19px;background:linear-gradient(135deg,#d7dbce,#9faeaa);box-shadow:7px 10px 24px #07132255;z-index:4;transition:transform .45s}
+.photo-slip img{width:100%;height:100%;object-fit:cover;object-position:center 24%;display:block}.photo-slip:after{position:absolute;bottom:6px;left:0;right:0;text-align:center;font-family:Georgia,serif;font-size:7px;letter-spacing:2px;color:#344955}
+.photo-slip-kun{top:165px;right:79px;width:72px;height:105px;transform:rotate(14deg)}.photo-slip-kun:after{content:'KUN'}
+.photo-slip-juhoon{top:153px;left:602px;width:71px;height:94px;transform:rotate(-14deg)}.photo-slip-juhoon:after{content:'JUHOON'}
+.photo-slip-kun:hover{transform:rotate(5deg) scale(1.2);z-index:7}.photo-slip-juhoon:hover{transform:rotate(-5deg) scale(1.2);z-index:7}
+button.date{padding:0;text-align:left}button.date:hover{color:#e3d5b8}
+button.date span{margin-left:0;color:inherit}
+@keyframes photo-in{from{opacity:.3}to{opacity:1}}
+@media(max-height:760px){.photo-gallery{height:620px}.gallery-copy{padding-top:40px}.gallery-copy .gallery-message{font-size:18px;margin-bottom:15px}.gallery-copy h2{font-size:44px}}
+@media(prefers-reduced-motion:reduce){.portrait-image{animation:none}.photo-slip,.photo-thumbnail{transition:none}}
+.portrait-pane{overflow:hidden}
+.portrait-button{height:100%;width:auto;aspect-ratio:3/4;max-width:100%;perspective:1400px}
+.portrait-stack{position:relative;display:block;width:100%;height:100%;transform-style:preserve-3d;isolation:isolate}
+.photo-face{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;border:1px solid #e6e4d529;box-shadow:15px 23px 38px #020c1c77;backface-visibility:hidden;will-change:transform,opacity;animation:none}
+.portrait-incoming{opacity:0;pointer-events:none}
+.sheen-mask{position:absolute;inset:0;overflow:hidden;pointer-events:none;z-index:3}
+.photo-sheen{position:absolute;inset:0;background:linear-gradient(105deg,transparent 27%,#fff5d58c 48%,transparent 67%);opacity:0;mix-blend-mode:screen;pointer-events:none}
+.photo-slip-kun,.photo-slip-juhoon{width:82px;height:120px}
